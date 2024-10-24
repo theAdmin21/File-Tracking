@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'depart.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="logo.png" alt="logo" width="100px" height="100">
+                <h2>Management</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <!-- <li><a href="#">Comment</a></li> -->
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Performance</a></li>
+                    <li><a href="#">profile</a></li>
+                    <li><a href="#">Documents</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <button id="logoutButton">Logout</button>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <header>
+                <span>Dashboard</span>
+                
+                <div class="user-info">
+                    
+                </div>
+            </header>
+            
+            <div class="content">
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="activities">
+                    <h3>Recent Activities</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="radial-charts">
+                    <div class="chart">
+                        <canvas id="radialChart1"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="radialChart2"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="radialChart3"></canvas>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <h3>Event</h3>
+                    <p>January</p>
+                    <!-- Add a calendar representation here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'depart.js' %}"></script>
+</body>
+</html>

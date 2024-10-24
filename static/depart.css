@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, WHITE    , hsl(278, 76%, 80%));
+    color: #0c0101;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #ebb8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #0e0606;
+    font-size: 16px;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+}
+.span{
+    font-size: 80px;
+}
+
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-areas:
+        'chart-container activities'
+        'radial-charts calendar';
+    gap: 20px;
+    padding: 20px;
+}
+
+.chart-container {
+    grid-area: chart-container;
+}
+
+.activities {
+    grid-area: activities;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.radial-charts {
+    grid-area: radial-charts;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.chart {
+    width: 30%;
+}
+
+.calendar {
+    grid-area: calendar;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+#logoutButton {
+    background-color: #a836f4; /* Red background */
+    color: white; /* White text */
+    padding: 20px 90px; /* Padding */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#logoutButton:hover {
+    background-color: #6018e7; /* Darker red on hover */
+}
